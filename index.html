@@ -89,25 +89,30 @@
       text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
     }
 
-    .floating-btn {
+  .floating-btn {
     position: absolute;
-    right: 7%;
-    bottom: 6%;
-    z-index: 3;
+    right: 13%;
+    bottom: 18%;
+    z-index: 8;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     min-width: 180px;
-    padding: 20px 64px;
+    padding: 30px 34px;
     background: #d60000;
     color: #fff;
     text-decoration: none;
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: 1.6rem;
+    font-weight: 900;
     border-radius: 999px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
     transition: transform 0.25s ease, background 0.25s ease;
     line-height: normal;
+}
+
+.btn-img-3 {
+  right: 65%;
+  bottom: 18%;
 }
     .floating-btn:hover {
       background: #b80000;
@@ -184,11 +189,28 @@
       }
 
       .floating-btn {
-        bottom: 4.5%;
-        width: min(38%, 200px);
+        left: 79%;
+        right: 5%;
         font-size: 0.86rem;
         padding: 10px 14px;
       }
+
+      @media (max-width: 768px) {
+  .btn-img-3 {
+    right: 10%;
+    bottom: 14%;
+    left: 2%;
+    transform: none;
+    width: auto;
+  }
+}
+@media (max-width: 480px) {
+  .btn-img-3 {
+    right: revert-layer;
+    bottom: 7%;
+  }
+}
+
     }
   </style>
 </head>
@@ -229,7 +251,7 @@
 
       <div class="overlay"></div>
 
-      <a href="pagina2.html" class="floating-btn">Ir a otra página</a>
+      <a href="pagina2.html" class="floating-btn">ORDENA AHORA</a>
     </div>
   </section>
     <section class="hero">
@@ -248,7 +270,7 @@
 
       <div class="overlay"></div>
 
-      <a href="pagina2.html" class="floating-btn">Ir a otra página</a>
+    <a href="pagina2.html" class="floating-btn btn-img-3">ORDENA AHORA</a>
     </div>
   </section>
     <section class="hero">
@@ -267,7 +289,7 @@
 
       <div class="overlay"></div>
 
-      <a href="pagina2.html" class="floating-btn">Ir a otra página</a>
+      <a href="pagina2.html" class="floating-btn">ORDENA AHORA</a>
     </div>
   </section>
     <section class="hero">
@@ -286,7 +308,7 @@
 
       <div class="overlay"></div>
 
-      <a href="pagina2.html" class="floating-btn">Ir a otra página</a>
+    <a href="pagina2.html" class="floating-btn btn-img-3">ORDENA AHORA</a>
     </div>
   </section>
     <section class="hero">
