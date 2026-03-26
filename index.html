@@ -188,31 +188,61 @@
         font-size: 0.74rem;
       }
 
-      .floating-btn {
-        left: 79%;
-        right: 5%;
-        font-size: 0.86rem;
-        padding: 10px 14px;
-      }
-
-      @media (max-width: 768px) {
-  .btn-img-3 {
-    right: 10%;
-    bottom: 14%;
-    left: 2%;
-    transform: none;
-    width: auto;
-  }
-}
-@media (max-width: 480px) {
-  .btn-img-3 {
-    right: revert-layer;
-    bottom: 7%;
-  }
-}
-
+    .floating-btn {
+      left: 79%;
+      right: 5%;
+      font-size: 0.86rem;
+      padding: 10px 14px;
     }
-  </style>
+  }
+
+  @media (max-width: 768px) {
+    .btn-img-3 {
+      right: 10%;
+      bottom: 14%;
+      left: 2%;
+      transform: none;
+      width: auto;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .btn-img-3 {
+      left: 3%;
+      right: 64%;
+      width: 40%;
+      bottom: 5%;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .btn-img-3 {
+      left: 3%;
+      right: 64%;
+      width: 40%;
+      bottom: 5%;
+    }
+    /* más pequeño que 480 */
+@media (max-width: 390px) {
+  .btn-img-3 {
+    right: 4%;
+    bottom: 5%;
+    padding: 9px 12px;
+    font-size: 0.75rem;
+    min-width: 110px;
+  }
+  @media (max-width: 390px) {
+  .floating-btn {
+    right: 4%;
+    bottom: 5%;
+    padding: 9px 12px;
+    font-size: 0.75rem;
+    min-width: 110px;
+  }
+}
+  }
+}
+</style>
 </head>
 <body>
 
@@ -257,6 +287,7 @@
     <section class="hero">
     <div class="image-wrapper">
       <picture>
+        <source media="(max-width:390px)" srcset="LANDING COPA TALENTO-02-mini mobil.jpg" />
         <source media="(max-width: 480px)" srcset="LANDING COPA TALENTO-02-mobile.jpg" />
         <source media="(max-width: 768px)" srcset="LANDING COPA TALENTO-02-tablet.jpg" />
         <img
@@ -276,8 +307,10 @@
     <section class="hero">
     <div class="image-wrapper">
       <picture>
+        <source media="(max-width:390px)" srcset="LANDING COPA TALENTO-02-mini mobil.jpg" />
         <source media="(max-width: 480px)" srcset="LANDING COPA TALENTO-02-mobile.jpg" />
         <source media="(max-width: 768px)" srcset="LANDING COPA TALENTO-02-tablet.jpg" />
+        <source media="(max-width: 1024px)" srcset="LANDING COPA TALENTO-02-desktop.jpg" />
         <img
           class="hero-img"
           src="LANDING COPA TALENTO-04.jpg"
@@ -297,6 +330,7 @@
       <picture>
         <source media="(max-width: 480px)" srcset="LANDING COPA TALENTO-02-mobile.jpg" />
         <source media="(max-width: 768px)" srcset="LANDING COPA TALENTO-02-tablet.jpg" />
+        <source media="(max-width: 1024px)" srcset="LANDING COPA TALENTO-02-desktop.jpg" />
         <img
           class="hero-img"
           src="LANDING COPA TALENTO-05.jpg"
@@ -316,6 +350,8 @@
       <picture>
         <source media="(max-width: 480px)" srcset="LANDING COPA TALENTO-02-mobile.jpg" />
         <source media="(max-width: 768px)" srcset="LANDING COPA TALENTO-02-tablet.jpg" />
+        <source media="(max-width: 1024px)" srcset="LANDING COPA TALENTO-02-desktop.jpg" />
+
         <img
           class="hero-img"
           src="LANDING COPA TALENTO-06.jpg"
