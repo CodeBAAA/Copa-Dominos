@@ -89,31 +89,30 @@
       text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
     }
 
-  .floating-btn {
+    /* ESTILO BASE: tamaño, forma y comportamiento para TODOS */
+    .floating-btn {
     position: absolute;
-    right: 11%;
+    right: 10%;
     bottom: 12%;
     z-index: 8;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     min-width: 180px;
-    padding: 30px 34px;
-    background: #d60000;
+    padding: 28px 34px;
+    background: #FF0000;
     color: #fff;
     text-decoration: none;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-weight: 900;
     border-radius: 999px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
     transition: transform 0.25s ease, background 0.25s ease;
     line-height: normal;
+    text-align: center;
+    white-space: nowrap;
 }
 
-.btn-img-3 {
-  right: 65%;
-  bottom: 18%;
-}
     .floating-btn:hover {
       background: #b80000;
       transform: scale(1.04);
@@ -123,20 +122,50 @@
       transform: scale(0.98);
     }
 
+    /* SOLO COLOR */
+    .floating-btn-blue {
+      background: #0090E2;
+      color: #fff;
+    }
+
+    .floating-btn-blue:hover {
+      background: #0090E2;
+    }
+
+    .floating-btn-blue:active {
+      background: #0090E2;
+    }
+
+    /* SOLO POSICIÓN */
+    .btn-img-3 {
+      right: 65%;
+      bottom: 18%;
+      left: auto;
+    }
+
     @media (max-width: 1024px) {
       .floating-btn {
-        right: 6%;
-        bottom: 5%;
-        min-width: 170px;
-        padding: 12px 22px;
+        right: 7%;
+        bottom: 10%;
+        min-width: 27%;
+        padding: 15px 22px;
+        font-size: 160%;
       }
 
       .content {
         width: min(92%, 760px);
       }
+
+      .btn-img-3 {
+         right: 60%;
+        bottom: 10%;
+        min-width: 27%;
+        padding: 15px 22px;
+        font-size: 160%;
+      }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 800px) {
       .content {
         width: 92%;
         padding: 10px 14px;
@@ -153,23 +182,49 @@
         line-height: 1.35;
       }
 
+      /* MISMO TAMAÑO PARA TODOS LOS BOTONES */
       .floating-btn {
-        left: 76%;
-        right: auto;
+        left: 61%;
         bottom: 5%;
-        transform: translateX(-50%);
-        width: min(40%, 260px);
         min-width: unset;
+        width: min(47%, 250px);
         padding: 11px 16px;
         font-size: 0.95rem;
       }
 
-      .floating-btn:hover {
+      /* BOTÓN DERECHO */
+      .floating-btn:not(.btn-img-3) {
+      bottom: 10%;
+        left: 60%;
+        width: min(80%, 266px);
+        font-size: 160%;
+        transform: none;
+      }
+
+      .floating-btn:not(.btn-img-3):hover {
         transform: translateX(-50%) scale(1.03);
       }
 
-      .floating-btn:active {
+      .floating-btn:not(.btn-img-3):active {
         transform: translateX(-50%) scale(0.98);
+      }
+
+      /* BOTÓN IZQUIERDO */
+    .btn-img-3 {
+        left: 6%;
+        bottom: 10%;
+        width: min(80%, 266px);
+        font-size: 160%;
+        transform: none;
+       
+    }
+
+      .btn-img-3:hover {
+        transform: scale(1.03);
+      }
+
+      .btn-img-3:active {
+        transform: scale(0.98);
       }
     }
 
@@ -188,61 +243,85 @@
         font-size: 0.74rem;
       }
 
-    .floating-btn {
-      left: 79%;
-      right: 5%;
-      font-size: 0.86rem;
-      padding: 10px 14px;
-    }
-  }
+      /* MISMO ALTO Y ANCHO PARA AMBOS */
+      .floating-btn {
+        bottom: 12%;
+        width: 31%;
+        min-width: unset;
+        font-size: 0.75rem;
+        padding: 10px 14px;
+      }
 
-  @media (max-width: 768px) {
-    .btn-img-3 {
-      right: 10%;
-      bottom: 14%;
-      left: 2%;
-      transform: none;
-      width: auto;
-    }
-  }
+      .floating-btn:not(.btn-img-3) {
+        left: 76%;
+        width: 31%;
+        right: auto;
+        transform: translateX(-50%);
+      }
 
-  @media (max-width: 480px) {
-    .btn-img-3 {
-      left: 3%;
-      right: 64%;
-      width: 40%;
-      bottom: 5%;
-    }
-  }
+      .floating-btn:not(.btn-img-3):hover {
+        transform: translateX(-50%) scale(1.03);
+      }
 
-  @media (max-width: 1024px) {
-    .btn-img-3 {
-      left: 3%;
-      right: 64%;
-      width: 40%;
-      bottom: 5%;
+      .floating-btn:not(.btn-img-3):active {
+        transform: translateX(-50%) scale(0.98);
+      }
+
+      .btn-img-3 {
+        bottom: 10%;
+        left: 8%;
+        right: auto;
+        transform: none;
+      }
+
+      .btn-img-3:hover {
+        transform: scale(1.03);
+      }
+
+      .btn-img-3:active {
+        transform: scale(0.98);
+      }
     }
-    /* más pequeño que 480 */
-@media (max-width: 390px) {
-  .btn-img-3 {
-    right: 4%;
-    bottom: 5%;
-    padding: 9px 12px;
-    font-size: 0.75rem;
-    min-width: 110px;
-  }
-  @media (max-width: 390px) {
-  .floating-btn {
-    right: 4%;
-    bottom: 5%;
-    padding: 9px 12px;
-    font-size: 0.75rem;
-    min-width: 110px;
-  }
-}
-  }
-}
-</style>
+
+    @media (max-width: 200px) {
+      /* SIGUEN IGUALES EN TAMAÑO */
+      .floating-btn {
+        bottom: 5%;
+        width: 34%;
+        min-width: unset;
+        padding: 9px 12px;
+        font-size: 0.75rem;
+      }
+
+      .floating-btn:not(.btn-img-3) {
+        left: 75%;
+        right: auto;
+        transform: translateX(-50%);
+      }
+
+      .btn-img-3 {
+        left: 3%;
+        right: auto;
+        transform: none;
+      }
+
+      .floating-btn:not(.btn-img-3):hover {
+        transform: translateX(-50%) scale(1.03);
+      }
+
+      .floating-btn:not(.btn-img-3):active {
+        transform: translateX(-50%) scale(0.98);
+      }
+
+      .btn-img-3:hover {
+        transform: scale(1.03);
+      }
+
+      .btn-img-3:active {
+        transform: scale(0.98);
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -261,8 +340,8 @@
       </picture>
 
       <div class="overlay"></div>
-
-      <div class="content">
+      <div class="content"></div>
+    </div>
   </section>
 
   <section class="hero">
@@ -281,10 +360,11 @@
 
       <div class="overlay"></div>
 
-      <a href="pagina2.html" class="floating-btn">ORDENA AHORA</a>
+      <a href="pagina2.html" class="floating-btn floating-btn-blue">ORDENA AHORA</a>
     </div>
   </section>
-    <section class="hero">
+
+  <section class="hero">
     <div class="image-wrapper">
       <picture>
         <source media="(max-width:390px)" srcset="LANDING COPA TALENTO-02-mini mobil.jpg" />
@@ -293,7 +373,7 @@
         <img
           class="hero-img"
           src="LANDING COPA TALENTO-03.jpg"
-          alt="Landing Copa Talento 2"
+          alt="Landing Copa Talento 3"
           loading="lazy"
           decoding="async"
         />
@@ -301,10 +381,11 @@
 
       <div class="overlay"></div>
 
-    <a href="pagina2.html" class="floating-btn btn-img-3">ORDENA AHORA</a>
+      <a href="pagina2.html" class="floating-btn btn-img-3">ORDENA AHORA</a>
     </div>
   </section>
-    <section class="hero">
+
+  <section class="hero">
     <div class="image-wrapper">
       <picture>
         <source media="(max-width:390px)" srcset="LANDING COPA TALENTO-02-mini mobil.jpg" />
@@ -314,7 +395,7 @@
         <img
           class="hero-img"
           src="LANDING COPA TALENTO-04.jpg"
-          alt="Landing Copa Talento 2"
+          alt="Landing Copa Talento 4"
           loading="lazy"
           decoding="async"
         />
@@ -322,10 +403,11 @@
 
       <div class="overlay"></div>
 
-      <a href="pagina2.html" class="floating-btn">ORDENA AHORA</a>
+      <a href="pagina2.html" class="floating-btn floating-btn-blue">ORDENA AHORA</a>
     </div>
   </section>
-    <section class="hero">
+
+  <section class="hero">
     <div class="image-wrapper">
       <picture>
         <source media="(max-width: 480px)" srcset="LANDING COPA TALENTO-02-mobile.jpg" />
@@ -334,7 +416,7 @@
         <img
           class="hero-img"
           src="LANDING COPA TALENTO-05.jpg"
-          alt="Landing Copa Talento 2"
+          alt="Landing Copa Talento 5"
           loading="lazy"
           decoding="async"
         />
@@ -342,28 +424,28 @@
 
       <div class="overlay"></div>
 
-    <a href="pagina2.html" class="floating-btn btn-img-3">ORDENA AHORA</a>
+      <a href="pagina2.html" class="floating-btn btn-img-3">ORDENA AHORA</a>
     </div>
   </section>
-    <section class="hero">
+
+  <section class="hero">
     <div class="image-wrapper">
       <picture>
         <source media="(max-width: 480px)" srcset="LANDING COPA TALENTO-02-mobile.jpg" />
         <source media="(max-width: 768px)" srcset="LANDING COPA TALENTO-02-tablet.jpg" />
         <source media="(max-width: 1024px)" srcset="LANDING COPA TALENTO-02-desktop.jpg" />
-
         <img
           class="hero-img"
           src="LANDING COPA TALENTO-06.jpg"
-          alt="Landing Copa Talento 2"
+          alt="Landing Copa Talento 6"
           loading="lazy"
           decoding="async"
         />
       </picture>
 
       <div class="overlay"></div>
-
     </div>
   </section>
+
 </body>
 </html>
