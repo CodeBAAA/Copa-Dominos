@@ -92,7 +92,7 @@
     /* ESTILO BASE: tamaño, forma y comportamiento para TODOS */
     .floating-btn {
     position: absolute;
-    right: 10%;
+    right: 13%;
     bottom: 12%;
     z-index: 8;
     display: inline-flex;
@@ -139,13 +139,13 @@
     /* SOLO POSICIÓN */
     .btn-img-3 {
       right: 65%;
-      bottom: 18%;
+      bottom: 13%;
       left: auto;
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1050px) {
       .floating-btn {
-        right: 7%;
+        right: 10%;
         bottom: 10%;
         min-width: 27%;
         padding: 15px 22px;
@@ -253,10 +253,13 @@
       }
 
       .floating-btn:not(.btn-img-3) {
-        left: 76%;
-        width: 31%;
+        bottom: 10%;
+        width: min-content;
+        left: 59%;
         right: auto;
-        transform: translateX(-50%);
+        padding: 2%;
+        transform: none;
+        font-size: 84%;
       }
 
       .floating-btn:not(.btn-img-3):hover {
